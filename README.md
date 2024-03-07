@@ -38,3 +38,46 @@ echo %JAVA_HOME%
 ```
 The result should be the path to the JDK installation:  
 `C:\Program Files\Java\jdk1.8.0_111`
+
+## 3. MacOS
+### 3.1. Single User – Mac OS X 10.5 or Newer
+From OS X 10.5, Apple introduced a command line tool (/usr/libexec/java_home) that dynamically finds the top Java version specified in Java Preferences for the current user.  
+Open ~/.bash_profile in any text editor and add the following:  
+```
+export JAVA_HOME=$(/usr/libexec/java_home)
+```
+Save and close the file.  
+Open a Terminal and run the source command to apply the changes:  
+```
+source ~/.bash_profile
+```
+Now we can check the value of the JAVA_HOME variable:  
+```
+echo $JAVA_HOME
+```
+The result should be the path to the JDK installation:  
+`/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home`
+
+### 3.2. Single User – Mac OS X Older Versions
+For older versions of OS X, we have to set the exact path to the JDK installation. 
+Open ~/.bash_profile in any editor and add the following: 
+```
+export JAVA_HOME=/path/to/java_installation
+```
+Save and close the file.  
+Open a Terminal and run the source command to apply the changes:  
+```
+source ~/.bash_profile
+```
+Now we can check the value of the JAVA_HOME variable:  
+```
+echo $JAVA_HOME
+```
+The result should be the path to the JDK installation:
+`/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home`
+
+### 3.3. Global Setting  
+To set JAVA_HOME globally for all users, the steps are the same as for a single user, but we use the file /etc/profile.
+
+
+
