@@ -125,4 +125,4 @@ The result should be the path to the JDK installation:
 `/usr/lib/jvm/java-8-oracle`
 
 ## 5. Conclusion
-n this article, we covered ways to set the JAVA_HOME environment variable on Windows, Mac OS X and Linux.
+In this article, we covered ways to set the JAVA_HOME environment variable on Windows, Mac OS X and Linux.
