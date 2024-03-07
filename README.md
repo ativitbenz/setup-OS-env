@@ -36,7 +36,7 @@ Open Command Prompt and check the value of the JAVA_HOME variable:
 ```
 echo %JAVA_HOME%
 ```
-The result should be the path to the JDK installation:  
+The result should be the path to the JDK installation:
 `C:\Program Files\Java\jdk1.8.0_111`
 
 ## 3. MacOS
@@ -55,7 +55,7 @@ Now we can check the value of the JAVA_HOME variable:
 ```
 echo $JAVA_HOME
 ```
-The result should be the path to the JDK installation:  
+The result should be the path to the JDK installation:
 `/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home`
 
 ### 3.2. Single User – Mac OS X Older Versions
@@ -80,4 +80,13 @@ The result should be the path to the JDK installation:
 To set JAVA_HOME globally for all users, the steps are the same as for a single user, but we use the file /etc/profile.
 
 
+## 4. Linux
+We’re going to manipulate the PATH here, of course, so here are the detailed instructions on how to do it.
 
+### 4.1. Single User
+To set JAVA_HOME in Linux for a single user, we can use /etc/profile or /etc/environment (preferred for system-wide setting) or ~/.bashrc (user-specific setting). 
+Open ~/.bashrc in any text editor and add the following: 
+``` export JAVA_HOME=/path/to/java_installation ```
+Save and close the file. 
+Run the source command to load the variable: 
+``` source ~/.bashrc ```
