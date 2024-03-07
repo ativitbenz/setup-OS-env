@@ -1,4 +1,5 @@
 # Set JAVA_HOME Variable in Windows, Mac OS X, and Linux
+Original Doc: `https://www.baeldung.com/java-home-on-windows-mac-os-x-linux#3-global-setting`
 
 ## 1. Overview  
 In this quick tutorial, we’ll take a look at how to set the JAVA_HOME variable on Windows, Mac OS X and Linux.
@@ -86,7 +87,42 @@ We’re going to manipulate the PATH here, of course, so here are the detailed i
 ### 4.1. Single User
 To set JAVA_HOME in Linux for a single user, we can use /etc/profile or /etc/environment (preferred for system-wide setting) or ~/.bashrc (user-specific setting). 
 Open ~/.bashrc in any text editor and add the following: 
-``` export JAVA_HOME=/path/to/java_installation ```
+``` 
+export JAVA_HOME=/path/to/java_installation
+```
 Save and close the file. 
 Run the source command to load the variable: 
-``` source ~/.bashrc ```
+``` 
+source ~/.bashrc
+```
+Now we can check the value of the JAVA_HOME variable:
+```
+echo $JAVA_HOME
+```
+The result should be the path to the JDK installation:
+`/usr/lib/jvm/java-8-oracle`
+
+### 4.2. Global Setting
+To set JAVA_HOME in Linux for all users, we can use /etc/profile or /etc/environment (preferred). 
+Open /etc/environment in any text editor and add the following: 
+```
+JAVA_HOME=/path/to/java_installation
+```
+Please note that /etc/environment is not a script but a list of assignment expressions (that is why export is not used). This file is read at the time of login. 
+To set JAVA_HOME using /etc/profile, here’s what we’ll add to the file: 
+```
+export JAVA_HOME=/path/to/java_installation
+```
+Run the source command to load the variable:
+```
+source /etc/profile
+```
+Now we can check the value of the JAVA_HOME variable:
+```
+echo $JAVA_HOME
+```
+The result should be the path to the JDK installation:
+`/usr/lib/jvm/java-8-oracle`
+
+## 5. Conclusion
+n this article, we covered ways to set the JAVA_HOME environment variable on Windows, Mac OS X and Linux.
