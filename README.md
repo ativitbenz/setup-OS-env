@@ -1,10 +1,10 @@
 # Set JAVA_HOME Variable in Windows, Mac OS X, and Linux
 
-1. Overview  
+## 1. Overview  
 In this quick tutorial, we’ll take a look at how to set the JAVA_HOME variable on Windows, Mac OS X and Linux.
 
-2. Windows  
-2.1. Windows 11  
+## 2. Windows  
+### 2.1. Windows 11  
   1. Locate the directory where the JDK is installed on your system and note down the path to this directory.   
   2. Right-click on the Windows Start button and select System. 
   3. In the System window, click on Advanced System Settings on the left sidebar. 
